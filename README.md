@@ -29,3 +29,8 @@ obtenemos todas las peticiones guardadas en la db en un formato JSON
 - base de datos H2 
 - servicios REST
 
+#COMO ACCEDER AL PROYECTO 
+- copiamos la url del repositorio donde esta el proyecto
+- vamos a una consola donde tengamos GIT instalado 
+- sino tiene git instalado ve al siguiente enlace https://www.youtube.com/watch?v=cYLapo1FFmA
+- escribimos el siguiente comando GIT CLONE 

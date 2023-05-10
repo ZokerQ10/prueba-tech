@@ -1,13 +1,19 @@
 package co.com.carlos.quintero.pruebatecnica.service;
 
 import co.com.carlos.quintero.pruebatecnica.mapper.numberMapper;
+import co.com.carlos.quintero.pruebatecnica.model.numberArrayRecord;
 import co.com.carlos.quintero.pruebatecnica.repository.numberArrayRepository;
 import co.com.carlos.quintero.pruebatecnica.request.NumberRequest;
 import co.com.carlos.quintero.pruebatecnica.response.numberResponse;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.*;
 
 
@@ -19,6 +25,10 @@ public class PruebaService {
 
     public PruebaService(numberArrayRepository numberArrayRepository) {
         this.numberArrayRepository = numberArrayRepository;
+    }
+
+    public List<numberArrayRecord> findAll() {
+        return numberArrayRepository.findAll();
     }
 
 
@@ -42,7 +52,7 @@ public class PruebaService {
     }
 
     @PostConstruct
-    public static void numberArray(){
+    public static void numberArray() {
         int[] numeros = new int[100];
         for (int i = 0; i < 100; i++) {
             numeros[i] = i + 1;
